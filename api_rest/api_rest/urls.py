@@ -6,7 +6,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Documentación API REST - Python",
+      title="Documentación API REST - Django REST Framework",
       default_version='v1',
       description="Documentación de api",
       terms_of_service="https://www.google.com/policies/terms/",
