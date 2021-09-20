@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 from process_list.serializers.ProcessListSerializer import ProcessListSerializer
 from rest_framework import status
 from rest_framework.response import Response
@@ -14,8 +15,10 @@ class ProcessListAPIView(APIView):
         data = request.data
         try:
             data_serializer = ProcessListSerializer(data = {'unclassified': data['sin clasificar']})
-            result = data_serializer.data if  data_serializer.is_valid() else data_serializer.errors
-            return Response(result, status = status.HTTP_200_OK)
+            if not data_serializer.is_valid():
+                raise Exception(data_serializer.errors)
+
+            return Response(data_serializer.data, status = status.HTTP_200_OK)
         except KeyError as e:
             return Response({'error': f'Error de llave {e}'}, status = status.HTTP_400_BAD_REQUEST)
         except Exception as e:
