@@ -16,25 +16,32 @@ Este proyecto es un API REST con Django REST Framework y PostgreSQL, incluye las
 
 3. Ativar entorno virtual
     ```
-    (env) source env/bin/activate
+    source env/bin/activate
     ```
 4. Instalar librerías
     ```
     (env) pip install -r requirements.txt 
     ```
-5. Crear BD 
-    ```
-    CREATE DATABASE db_apirest;
-    ```
-6. Verificar datos de conexión a la BD en:
+5. Verificar datos de conexión a la BD en:
 
     `api_rest/api_rest/settings/local.py`
+    
+6. Crear BD 
 
-7. Crear super usuario
+7. Correr migraciones
+    
+   ```
+   (env) cd api_rest/
+   
+   (env) python3 manage.py migrate
+   
+   ```
+
+8. Crear super usuario para ingresar al admin y crear datos de prueba 
     ```
-    (env) python3 manage.py createsuoeruser
+    (env) python3 manage.py createsuperuser
     ```
-8. Ejecutar el servidor:
+9. Ejecutar el servidor:
     ```
     (env) python3 manage.py runserver 
     ```
