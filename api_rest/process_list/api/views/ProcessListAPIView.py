@@ -3,10 +3,11 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-import json
 
 class ProcessListAPIView(APIView):
-
+    """
+    Procesar una matriz de números. 
+    """
     def post(self, request):
         data = request.data
         try:
