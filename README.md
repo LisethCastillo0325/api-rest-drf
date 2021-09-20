@@ -1,6 +1,11 @@
-### Configuración Inicial
+## API REST con Django REST Framework y PostgreSQL
 
-Este proyecto es un API REST con Django REST Framework y PostgreSQL, incluye las migraciones iniciales.
+Este proyecto es un API REST con Django REST Framework y PostgreSQL, incluye:
+- Migraciones iniciales
+- Documentación con swagger
+- Coleccion de postman para conectar a la API
+
+### Configuración Inicial
 
 1. Clonar repositorio
 

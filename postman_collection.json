@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "9b60c6df-c604-4108-ab10-18a341e37097",
+		"name": "API REST - Django REST Framework",
+		"description": "ENDPOINT 1: Podrá ordenar una matriz de números\nENDPOINT 2: Define un api que devuelve información detallada sobre un usuario. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Consultar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuario/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuario",
+						""
+					]
+				},
+				"description": "Consultar información detalllada de los usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Procesar Lista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n   \"data\": {\n        \"sin clasificar\": [3,5,5,6,8,3,4,4,7,7,1,1,2] \n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/procesar-lista/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"procesar-lista",
+						""
+					]
+				},
+				"description": "Recibe una lista de numeros sin clasisficar y retorna la lista clasificada, con los valores ordenados al inicio, y los valores que se repiten al final"
+			},
+			"response": []
+		}
+	]
+}
