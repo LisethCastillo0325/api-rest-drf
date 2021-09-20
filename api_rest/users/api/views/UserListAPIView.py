@@ -6,7 +6,7 @@ class UserListAPIView(generics.ListAPIView):
     """
     Listar información detallada de los usuarios.
 
-    Retorna la lista de numeros ordenada, los valores repetidos se mueven al final
+    Se lista información del usuario, su tipo de documento, ciudad y tareas asociadas
     """
     serializer_class = UserListSerializer
 

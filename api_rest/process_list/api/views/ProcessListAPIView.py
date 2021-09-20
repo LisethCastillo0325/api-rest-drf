@@ -7,6 +7,8 @@ from rest_framework.views import APIView
 class ProcessListAPIView(APIView):
     """
     Procesar una matriz de números. 
+
+    Retorna la lista de numeros ordenada, los valores repetidos se mueven al final
     """
     def post(self, request):
         data = request.data
