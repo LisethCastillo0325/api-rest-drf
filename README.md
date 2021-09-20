@@ -31,7 +31,15 @@ Este proyecto es un API REST con Django REST Framework y PostgreSQL, incluye:
 
     `api_rest/api_rest/settings/local.py`
     
-6. Crear BD 
+6. Es necesario crear la base de datos con postgresql, o tambien se puede cambiar la configuración en `api_rest/api_rest/settings/local.py` para usar sqlite3 
+   ```
+   DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+   }
+   ```
 
 7. Correr migraciones
     
