@@ -13,4 +13,4 @@ class ProcessListTestCase(TestCase):
             content_type="application/json"
         )
         self.assertEquals(response.status_code, 200)
-        self.assertEquals(response.data['clasificado'], [1, 2, 3, 4, 5, 6, 7, 8, 1, 3, 4, 5, 7])
+        self.assertEquals(response.data['clasificado'], [1, 2, 3, 4, 5, 6, 7, 8, 5, 3, 4, 7, 1])
